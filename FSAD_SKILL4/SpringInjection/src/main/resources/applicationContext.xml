@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    
     <bean id="student" class="com.klu.Student">
-        <property name="name" value="Paramesh"/>
+        <constructor-arg value="101"/>
+        <constructor-arg value="Paramesh"/>
+        <constructor-arg value="Computer Science"/>
+        <constructor-arg value="3"/>
     </bean>
-
+    
     <bean id="studentsetter" class="com.klu.StudentSetter">
         <property name="student" ref="student"/>
     </bean>

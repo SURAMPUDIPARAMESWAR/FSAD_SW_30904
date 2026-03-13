@@ -40,11 +40,7 @@
       <artifactId>junit-jupiter-params</artifactId>
       <scope>test</scope>
     </dependency>
-    <dependency>
-    	<groupId>FSADKLU</groupId>
-    	<artifactId>DBDemoProject</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
-    </dependency>
+    
   </dependencies>
 
   <build>

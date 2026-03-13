@@ -6,15 +6,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class StudentSetter {
 
-    private Student student;
+    private Certification certification;
 
     @Autowired
-    public void setStudent(Student student) {
-        this.student = student;
+    public void setCertification(Certification certification) {
+        this.certification = certification;
     }
 
-    public void setDisplay() {
-        student.display();
-        System.out.println("Setter injection through Annotation....");
+    public void displaySetter() {
+        System.out.println("Setter Injection Successful");
+        System.out.println(certification);
     }
 }

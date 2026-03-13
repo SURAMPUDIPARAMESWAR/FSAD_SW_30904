@@ -5,13 +5,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class StudentField {
-	
-	@Autowired
-	private Student student;
-	public void fieldDisplay() {
-		student.display();
-		System.out.println("Field Injection done with Annotation....");
-	}
-	
 
+    @Autowired
+    private Certification certification;
+
+    public void displayField() {
+        System.out.println("Field Injection Successful");
+        System.out.println(certification);
+    }
 }

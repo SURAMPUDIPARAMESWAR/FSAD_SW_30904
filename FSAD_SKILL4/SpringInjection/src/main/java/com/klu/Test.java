@@ -19,5 +19,6 @@ public class Test {
         StudentConstructor stcon =
             (StudentConstructor) ctx.getBean("studentconstructor");
         stcon.conDisplay();
+        
     }
 }

@@ -5,15 +5,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class StudentConstructor {
-	private Student student;
-	
-	@Autowired
-	StudentConstructor(Student student){
-		this.student=student;
-	}
-	public void conDisplay() {
-		student.display();
-		System.out.println("Constructor Injection done with Annotation....");
-	}
 
+    private Certification certification;
+
+    @Autowired
+    public StudentConstructor(Certification certification) {
+        this.certification = certification;
+    }
+
+    public void displayConstructor() {
+        System.out.println("Constructor Injection Successful");
+        System.out.println(certification);
+    }
 }

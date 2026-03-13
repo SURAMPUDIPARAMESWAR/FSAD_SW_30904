@@ -1,26 +1,44 @@
 package com.klu;
 
 public class Student {
-	
-	String name;
-	String sample;
-	int id;
-	
-	
-	public void setName(String name) {
-		this.name= name;
-	}
-	
-	public void setSample(String sample) {
-		this.sample= sample;
-	}
-	
-	public void setId(int id) {
-		this.id= id;
-	}
-	
-	public void display() {
-		System.out.println("Name of the Student: "+name);
-	}
 
+    private int studentId;
+    private String name;
+    private String course;
+    private int year;
+
+    
+    public Student() {}
+
+    
+    public Student(int studentId, String name, String course, int year) {
+        this.studentId = studentId;
+        this.name = name;
+        this.course = course;
+        this.year = year;
+    }
+
+    // Setter methods (required in task)
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void display() {
+        System.out.println("Student ID : " + studentId);
+        System.out.println("Name       : " + name);
+        System.out.println("Course     : " + course);
+        System.out.println("Year       : " + year);
+    }
 }

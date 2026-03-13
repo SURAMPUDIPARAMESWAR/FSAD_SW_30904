@@ -10,17 +10,20 @@ public class AppTest {
         ApplicationContext ctx =
                 new AnnotationConfigApplicationContext(AppConfig.class);
 
+        System.out.println("----- Student Bean -----");
         Student st = ctx.getBean(Student.class);
         st.display();
 
-        StudentSetter ss = ctx.getBean(StudentSetter.class);
-        ss.setDisplay();
-
-        StudentConstructor sc = ctx.getBean(StudentConstructor.class);
-        sc.conDisplay();
-
+        System.out.println("\n----- Field Injection -----");
         StudentField sf = ctx.getBean(StudentField.class);
-        sf.fieldDisplay();
+        sf.displayField();
+
+        System.out.println("\n----- Setter Injection -----");
+        StudentSetter ss = ctx.getBean(StudentSetter.class);
+        ss.displaySetter();
+
+        System.out.println("\n----- Constructor Injection -----");
+        StudentConstructor sc = ctx.getBean(StudentConstructor.class);
+        sc.displayConstructor();
     }
-    
 }
